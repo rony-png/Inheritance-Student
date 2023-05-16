@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4030049916942307955}
   - component: {fileID: 8736221156879234433}
   - component: {fileID: 5973462607135535357}
+  - component: {fileID: 4430862664609908737}
+  - component: {fileID: 6232516930037497319}
   m_Layer: 0
   m_Name: Slingshot
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4618904335718416599}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.289, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -111,3 +113,44 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.54636157, y: 0.3046494}
   m_EdgeRadius: 0
+--- !u!50 &4430862664609908737
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4618904335718416599}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &6232516930037497319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4618904335718416599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d1285aecb9f954d995b916498227af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 4430862664609908737}
+  sr: {fileID: 8736221156879234433}
+  boxCollider: {fileID: 5973462607135535357}
+  canAttack: 1
+  attackDuration: 5
+  attackRate: 5
+  damage: 5
+  projectilePrefab: {fileID: 1343885669961447394, guid: 11de7388b881e38459e13bfacd23a527, type: 3}
