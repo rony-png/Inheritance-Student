@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float Speed = 5f;
     public Weapon defaultWeapon;
     public Weapon equippedWeapon;
     public Transform weaponSlot;
@@ -14,7 +14,9 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 movement;
 
-
+    public float health;
+    public float maxHealth;
+    
 
     void Start()
     {
@@ -53,7 +55,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // Move player based on movement input
-        transform.Translate(movement * moveSpeed * Time.fixedDeltaTime, Space.World);
+        transform.Translate(movement * Speed * Time.fixedDeltaTime, Space.World);
     }
 
     public void EquipWeapon(Weapon newWeapon)
